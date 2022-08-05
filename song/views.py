@@ -24,3 +24,8 @@ def song_detail(request, song_id):
     if request.method == 'GET':
         serializer = SongSerializer(song)
         return Response(serializer.data)
+    elif request.method == 'PUT':
+        serializer = SongSerializer(song, data = request.data)
+        serializer.is_valid(raise_exception = True)
+        serializer.save()
+        return Response(serializer.data)
