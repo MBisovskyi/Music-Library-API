@@ -29,3 +29,6 @@ def song_detail(request, song_id):
         serializer.is_valid(raise_exception = True)
         serializer.save()
         return Response(serializer.data)
+    elif request.method == 'DELETE':
+        song.delete()
+        return Response(status = status.HTTP_204_NO_CONTENT)
