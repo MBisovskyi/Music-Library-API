@@ -7,12 +7,95 @@
 	},
 	"item": [
 		{
+			"name": "Likes_Operations",
+			"item": [
+				{
+					"name": "Add_Like",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/songs/2/like/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"songs",
+								"2",
+								"like",
+								""
+							],
+							"query": [
+								{
+									"key": "\"likes_quantity\"",
+									"value": "+1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove_Like",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/songs/2/like/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"songs",
+								"2",
+								"like",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "All_Songs",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://127.0.0.1:8000/songs/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"songs",
+						""
+					]
 				}
 			},
 			"response": []
@@ -88,7 +171,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/songs/2/",
+					"raw": "http://127.0.0.1:8000/songs/1/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -99,7 +182,7 @@
 					"port": "8000",
 					"path": [
 						"songs",
-						"2",
+						"1",
 						""
 					]
 				}
@@ -112,7 +195,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/songs/4/",
+					"raw": "http://127.0.0.1:8000/songs/5/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -123,7 +206,7 @@
 					"port": "8000",
 					"path": [
 						"songs",
-						"4",
+						"5",
 						""
 					]
 				}
