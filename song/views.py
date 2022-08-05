@@ -6,7 +6,7 @@ from .models import Song
 from rest_framework import status
 
 # Create your views here.
-@api_view(['GET'], ['POST'])
+@api_view(['GET', 'POST'])
 def songs_list(request):
     if request.method == 'GET':
         songs = Song.objects.all()

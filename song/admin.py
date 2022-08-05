@@ -1,4 +1,3 @@
-from curses.ascii import SO
 from django.contrib import admin
 from .models import Song
 
