@@ -34,6 +34,7 @@ def song_detail(request, pk):
         song.delete()
         return Response(status = status.HTTP_204_NO_CONTENT)
 
+
 @api_view(['PATCH', 'DELETE'])
 def like_toggle(request, pk):
     song = get_object_or_404(Song, id = pk)
@@ -55,13 +56,3 @@ def like_toggle(request, pk):
         likes_quantity_response = (f"Likes quantity: {song.likes_quantity}")
         return Response(likes_quantity_response, status = status.HTTP_202_ACCEPTED)
 
-# def song_dict(song):
-#     new_song = {
-#         "title": song.title,
-#         "artist": song.artist,
-#         "album": song.album,
-#         "release_date": song.release_date,
-#         "genre": song.genre,
-#         "likes_quantity": song.likes_quantity,
-#     }
-#     return new_song
